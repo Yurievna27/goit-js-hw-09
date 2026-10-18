@@ -1,20 +1,20 @@
 const form = document.querySelector('.feedback-form');
-const emailInput = document.querySelector('.email-input');
-const textareaMsg = document.querySelector('.textarea-message');
+const emailInput = document.querySelector('[name="email"]');
+const textareaMsg = document.querySelector('[name="message"]');
 
-const formState = {
+const formData = {
   email: '',
   message: '',
 };
 
 const savedData = localStorage.getItem('feedback-form-state');
 if (savedData) {
-  const formData = JSON.parse(savedData);
-  formState.email = formData.email;
-  formState.message = formData.message;
+  const parsedData = JSON.parse(savedData);
+  formData.email = parsedData.email;
+  formData.message = parsedData.message;
 
-  emailInput.value = formState.email;
-  textareaMsg.value = formState.message;
+  emailInput.value = formData.email;
+  textareaMsg.value = formData.message;
 }
 
 form.addEventListener('input', () => {
