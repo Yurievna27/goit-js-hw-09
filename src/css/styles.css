@@ -52,6 +52,77 @@ ol {
   transition: transform 300ms ease;
 }
 
-.gallery-image:hover, .gallery-image:focus {
+.gallery-image:hover,
+.gallery-image:focus {
   transform: scale(1.025);
+}
+
+.feedback-form {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 408px;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.email-input,
+.textarea-message {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 250ms ease;
+}
+
+.email-input {
+  height: 40px;
+}
+
+.textarea-message {
+  height: 80px;
+  resize: none;
+}
+
+.email-input:hover,
+.textarea-message:hover {
+  border-color: #000;
+}
+
+.email-input:focus,
+.textarea-message:focus {
+  border-color: #808080;
+}
+
+.feedback-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.feedback-form button:hover {
+  background-color: #6c8cff;
 }
