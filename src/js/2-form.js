@@ -18,22 +18,22 @@ if (savedData) {
 }
 
 form.addEventListener('input', () => {
-  formState.email = emailInput.value.trim();
-  formState.message = textareaMsg.value.trim();
+  formData.email = emailInput.value.trim();
+  formData.message = textareaMsg.value.trim();
 
-  localStorage.setItem('feedback-form-state', JSON.stringify(formState));
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 });
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  if (!formState.email || !formState.message) {
+  if (!formData.email || !formData.message) {
     alert('Fill please all fields');
   } else {
-    console.log(formState);
+    console.log(formData);
     localStorage.removeItem('feedback-form-state');
 
-    formState.email = '';
-    formState.message = '';
+    formData.email = '';
+    formData.message = '';
     form.reset();
   }
 });
